@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name=”description” content="海迷聚集地-关于我们">
+    <title>海迷聚集地-关于我们</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/animate.min.css"/>
+    <link rel="stylesheet" href="../css/aboutUs.css"/>
+    <script type="text/javascript" src="../static/js/onread.js"></script>
+
+    <script type="text/javascript"
+            src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=G9kPKZkUGMV285MMYpQIwLFjXqaTk3LM"></script>
+
+    <style>
+        body {
+            /* height: 30vh; */
+        }
+
+        .topnav {
+            width: 100vw;
+            height: 70px;
+            background-color: rgb(7, 7, 58);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+        }
+
+        .leftIcon img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .rightBox li {
+            width: 14%;
+            text-align: center;
+        }
+
+        .rightBox li a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .rightBox li a:hover,
+        .rightBox li a:active {
+            color: #325da5;
+        }
+
+        .footer {
+            width: 100%;
+            height: 200px;
+            background-color: #1f2329;
+            display: flex;
+            border-bottom: 6px solid #1f2329;
+            position: absolute;
+            /* bottom: 0; */
+        }
+
+        .leftBox {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .leftBox p {
+            width: 200px;
+            text-align: left;
+        }
+
+        .leftBox p a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .adSty {
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+        }
+
+        .adSty li {
+            width: auto;
+            height: auto;
+            list-style: none;
+        }
+
+        .adSty li img {
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+            margin: 6px;
+        }
+
+        .companSty {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .secondOne div h2 {
+            text-align: center;
+            font-size: 9px;
+        }
+
+        .secondOne div p {
+            text-align: center;
+            font-weight: 300;
+            font-size: 11px;
+        }
+
+        .container .about-wrap {
+            height: 600px;
+            overflow: scroll;
+        }
+
+        /* 媒体查询 */
+        @media (max-width: 768px) {
+            .container {
+                margin: 6px auto !important;
+
+            }
+        }
+
+        .floatImg {
+            border-radius: 9px;
+        }
+
+        .about_us {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+        }
+
+        #allmap {
+            width: 600px;
+            height: 300px;
+            margin: 0;
+        }
+
+        .aboutItem {
+            flex-direction: row;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-evenly;
+            margin-bottom: 50px;
+        }
+        .companySty h3,
+        .companySty h4 {
+            margin: 30px;
+            font-weight: 300;
+            font-size: 15px;
+        }
+        .looo {
+            position: relative;
+        }
+        .looo::after {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 6px;
+            background-color: #1e9fff;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 26px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+<!-- 定义反白导航条 -->
+<div class="navbar-inverse navbar-static-top" style="background-color: rgb(7, 7, 58);justify-content: center">
+    <div class="container">
+        <!-- 申明logo的容器 -->
+        <div class="navbar-header">
+            <!-- 针对logo等固定内容的样式 -->
+            <a href="#" class="navbar-brand">海迷聚集地</a>
+            <!-- 定义隐藏下拉按钮 -->
+            <button class="navbar-toggle" data-toggle='collapse' data-target='.collapse'>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+
+        <!-- 做隐藏菜单 -->
+        <div class="collapse navbar-collapse" id="togglemenu">
+            <ul class="nav navbar-nav">
+                <!-- "cative"：定义当前页 -->
+                <li>
+                    <a href="../index.html" style="background-color: rgb(7, 7, 38);">首页</a>
+                    <div class="underline-bar"></div>
+                </li>
+                <li>
+                    <a href="./news.html">新闻</a>
+                    <div class="underline-bar"></div>
+                </li>
+                <li class="active">
+                    <a href="#">关于我们</a>
+                    <div class="underline-bar"></div>
+                </li>
+            </ul>
+
+            <form class="navbar-form navbar-right">
+                <!-- 声明表单组 -->
+                <div class="form-group">
+                    <!-- 声明输入框组 -->
+                    <div class="input-group">
+                        <!-- 声明文本输入框 -->
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                                <!-- 放大镜按钮 -->
+                                <button class="btn btn-default">
+                                    <!-- 用文字代替图标 -->
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="about_us">
+    <h3
+            class="looo"
+            style="text-align: center; font-weight: bold; font-size: 20px"
+    >
+        关于我们
+    </h3>
+    <div class="aboutItem">
+        <div class="companySty" style="width: 100%">
+            <!-- <h3
+              class="looo wow bounceInDown"
+              data-wow-duration="1.5s"
+              style="text-align: center; font-weight: bold; font-size: 22px"
+            >
+              公司介绍
+            </h3>
+            <h4 style="text-align: center">对新事物保有热情</h4> -->
+            <h3
+                    class="wow slideInUp"
+                    data-wow-duration="1.3s"
+                    style="text-align: left;letter-spacing: 1px;line-height: 30px"
+            >
+                我们的主人公路飞，
+                他这个人最大的特点就是三个一个是对梦想的执着，另一个就是用于探索的精神，还有就是敢于笑对死亡的一个心态，
+                对于任何的困难他都是比较乐观的，即使在特别大的为难之下，它可以保持一个乐观的心态，这一点是非常打动我的，
+                他对于梦想的坚持是十分的执着，我们也都知道他从小都想成为一个海贼王，无论别人。是怎么嘲笑他或者是不承认他？
+            </h3>
+            <h4 class="wow bounceInLeft" data-wow-duration="1.5s"
+                style="text-align: left;letter-spacing: 1px;line-height: 30px">
+                他从来就不会因为别人所说的事情而改变自己的梦想，自己确确实实是要成为海贼王的男人。
+                他公开别人的嘲笑，只是为了自己的梦想敢于付出。
+                在这个过程中它招来了很多团队有所龙还有索隆娜美香吉士等人他们都也怀有自己的梦想，
+                可以说这是一个梦想的团队，并不是一个想要去企图得到别人财产，为了自己贪婪无限的欲望
+            </h4>
+        </div>
+
+    </div>
+    <div class="aboutItem">
+        <div style="width: 400px">
+            <ul style="float: left">
+                <p>机构名称：海迷聚集地</p>
+                <p>服务热线：13305907017</p>
+                <p>联系人：小米</p>
+                <p>邮　编：350002</p>
+                <p>邮　箱：xiaomi-kk@qq.com</p>
+                <p>
+                    地　址：福州仓山区金山大道橘园洲工业园区悦孚办公园区38号楼3楼307
+                </p>
+            </ul>
+        </div>
+        <div id="allmap"></div>
+    </div>
+    <!--/.aboutUs-->
+</div>
+
+<!--/.container-->
+<div class="footer hidden-xs">
+    <div class="leftBox">
+        <p><a href="#">K&K战队</a></p>
+        <p><a href="#">@2016-2020福州海迷聚集地</a></p>
+
+    </div>
+    <div class="leftBox">
+        <p><a href="#">关注我们</a></p>
+        <ul class="adSty">
+            <li><img src="../img/微信.png" alt=""/></li>
+            <li><img src="../img/知乎.png" alt=""/></li>
+            <li><img src="../img/头条.png" alt=""/></li>
+            <li><img src="../img/抖音.png" alt=""/></li>
+            <li><img src="../img/微博.png" alt=""/></li>
+            <img
+                    class="floatImg"
+                    style="
+              width: 70px !important;
+              height: 70px !important;
+              object-fit: cover;
+              position: absolute;
+              top: 40px;
+              object-fit: cover;
+              opacity: 0;
+            "
+                    src="../img/float1.png"
+                    alt=""
+            />
+        </ul>
+    </div>
+</div>
+<div class="secondOne visible-xs">
+    <div class="col-xs-12" style="background-color: #1f2329">
+        <ul
+                style="
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 5px;
+            background-color: #1f2329;
+          "
+        >
+            <li><a style="font-size: 9px" href="#">K&K战队科技有限公司</a></li>
+
+            <li><a style="font-size: 9px" href="#">联系方式：13305907017</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Initialize Swiper -->
+
+
+<script type="text/javascript">
+    // 百度地图API功能
+    var sContent = "福建省福州市仓山区建新镇金山大道618号金山工业区桔园洲园38号楼3层307室";
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(119.247256, 26.059701);
+    map.centerAndZoom(point, 29);
+    var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+    map.openInfoWindow(infoWindow, point); //开启信息窗口
+    map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+    map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+
+    $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var recipient = button.data('whatever') // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this)
+        // modal.find('.modal-title').text('New message to ' + recipient)
+        // modal.find('.modal-body input').val(recipient)
+    })
+</script>
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="referrer" content="no-referrer" />
+
+<head>
+    <meta charset="UTF-8">
+    <title>新闻</title>
+
+    <style>
+        .secondOne div h2 {
+            text-align: center;
+            font-size: 9px;
+        }
+        .secondOne div p {
+            text-align: center;
+            font-weight: 300;
+            font-size: 11px;
+        }
+        .footer {
+            width: 100%;
+            height: 200px;
+            background-color: #1f2329;
+            display: flex;
+            border-bottom: 6px solid #1f2329;
+            position: absolute;
+            /* bottom: 0; */
+        }
+        .leftBox {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .leftBox p {
+            width: 200px;
+            text-align: left;
+        }
+        .leftBox p a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .adSty {
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+        }
+        .adSty li {
+            width: auto;
+            height: auto;
+            list-style: none;
+        }
+        .adSty li img {
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+            margin: 6px;
+        }
+        .companSty {
+            max-width: 100%;
+            height: auto;
+        }
+        .secondOne div h2 {
+            text-align: center;
+            font-size: 9px;
+        }
+        .secondOne div p {
+            text-align: center;
+            font-weight: 300;
+            font-size: 11px;
+        }
+        .container .about-wrap {
+            height: 600px;
+            overflow: scroll;
+        }
+
+        .floatImg {
+            border-radius: 9px;
+        }
+        #allmap {
+            overflow: hidden;
+            width: 50%;
+            height: 200px;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+        .newsList{
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            display: flex;
+            width: 100%;
+        }
+        .list_new_img{
+            width: 300px;
+            height: 200px;
+            margin-top: 5px;
+        }
+        .list_new_item{
+            flex-direction: column;
+            margin-right: auto;
+            justify-content: center;
+            display: flex;
+            margin-left: auto;
+            width: 300px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .list_new_item:hover
+        {
+            transform:scale(1.1);
+            transition: all 0.5s;
+        }
+        #loadingT{
+            width: 100%;
+            min-height: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="../css/css.css"/>
+<!--<link rel="stylesheet" href="../static/css/bootstrap.css"/>-->
+<link rel="stylesheet" href="../css/nf.min.css"/>
+<link rel="stylesheet" href="../static/css/css.css" />
+<link rel="stylesheet" href="../static/css/animate.min.css" />
+<link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous"
+/>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-static-top" style="background-color: rgb(7, 7, 58)">
+    <div class="container">
+        <!-- 申明logo的容器 -->
+        <div class="navbar-header">
+            <!-- 针对logo等固定内容的样式 -->
+            <a href="#" class="navbar-brand" >海迷聚集地</a>
+            <!-- 定义隐藏下拉按钮 -->
+            <button class="navbar-toggle" data-toggle='collapse' data-target='.collapse'>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+
+        <!-- 做隐藏菜单 -->
+        <div class="collapse navbar-collapse" id="togglemenu">
+            <!-- 菜单项 -->
+            <ul class="nav navbar-nav">
+                <!-- "cative"：定义当前页 -->
+                <li>
+                    <a href="../index.html" style="background-color: rgb(7, 7, 38);">首页</a>
+                    <div class="underline-bar"></div>
+                </li>
+                <li  class="active">
+                    <a href="#">新闻</a>
+                    <div class="underline-bar"></div>
+                </li>
+                <li><a href="./aboutUs.html">关于我们</a>
+                    <div class="underline-bar"></div>
+                </li>
+            </ul>
+
+            <form class="navbar-form navbar-right">
+                <!-- 声明表单组 -->
+                <div class="form-group">
+                    <!-- 声明输入框组 -->
+                    <div class="input-group">
+                        <!-- 声明文本输入框 -->
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                                <!-- 放大镜按钮 -->
+                                <button class="btn btn-default">
+                                    <!-- 用文字代替图标 -->
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<div class="header h500">
+    <div
+            class="topBanner about"
+            style="
+          background: url(../img/news_banner.png) no-repeat;
+          background-size: cover;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        "
+    >
+        <p style="font-size: 33px; font-weight: bold;color: white">新闻</p>
+        <p style="color: white">News</p>
+    </div>
+</div>
+<div class="container">
+
+
+    <div id="newList" class="newsList">
+
+    </div>
+
+    <div id="loadingT">
+        <div>加载中...</div>
+    </div>
+
+    <!--分页-->
+    <div class="pageMod">
+        <span class="pull-left no-border" id="totalRecord">共5条记录</span>
+        <a href="javascript:void(0)" onclick="changePage('start')">首页</a>
+        <a href="javascript:void(0)" onclick="changePage('pre')" class="prev page">上一页</a><!--<a class="cur">1</a> <a href="#">2</a>-->
+        <a href="javascript:void(0)" onclick="changePage('next')" class="next page">下一页</a>
+        <a href="javascript:void(0)" onclick="changePage('end')">尾页</a> <span>1/2</span>
+    </div>
+
+</div>
+<div class="footer hidden-xs">
+    <div class="leftBox">
+        <p><a href="#">@2016-2020福州海迷聚集地</a></p>
+
+    </div>
+    <div class="leftBox">
+        <p><a href="#">关注我们</a></p>
+        <ul class="adSty">
+            <li><img src="../img/微信.png" alt="" /></li>
+            <li><img src="../img/知乎.png" alt="" /></li>
+            <li><img src="../img/头条.png" alt="" /></li>
+            <li><img src="../img/抖音.png" alt="" /></li>
+            <li><img src="../img/微博.png" alt="" /></li>
+            <img
+                    class="floatImg"
+                    style="
+              width: 70px !important;
+              height: 70px !important;
+              object-fit: cover;
+              position: absolute;
+              top: 40px;
+              object-fit: cover;
+              opacity: 0;
+            "
+                    src="../img/float1.png"
+                    alt=""
+            />
+        </ul>
+    </div>
+</div>
+
+<div class="secondOne visible-xs">
+    <div class="col-xs-12" style="background-color: #1f2329">
+        <ul
+                style="
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 5px;
+            background-color: #1f2329;
+          "
+        >
+            <li><a style="font-size: 9px" href="#">K&K战队科技有限公司</a></li>
+            <li>
+                <a
+                        style="font-size: 9px"
+                        target="_blank"
+                        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35010402350828"
+                >闽公安备案 35010402350828号</a
+                >
+            </li>
+            <li><a style="font-size: 9px" href="#">联系方式：13305907017</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!--/.container-->
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+    let pageNo = 1;
+    let pageSize = 8;
+    postNews(1); //初始化
+
+
+    function changePage(type) {
+        $(".newsList").empty();
+        $("#loadingT").css('display','flex');
+        this.oldPageNo = pageNo;
+        switch (type) {
+            case "start" : pageNo = 1;postNews(1);
+                break;
+            case "end" : pageNo = 2;postNews(pageNo);
+                break;
+            case "next" :
+                if (pageNo < 2){
+                    pageNo = parseInt(pageNo) + 1;
+                    postNews(pageNo);
+                }
+            break;
+            case "pre" :
+                if (pageNo > 0){
+                    pageNo = parseInt(pageNo) - 1;
+                    postNews(pageNo);
+                }
+            break
+        }
+
+
+
+    }
+
+    function postNews(pageNo) {
+        if (pageNo === this.oldPageNo){
+            return
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "https://www.fastmock.site/mock/3bee062264cf322e225497758e9a588c/officialWebsite/getNewsList",
+            contentType: "application/x-www-form-urlencoded",
+            data: {pageNo:pageNo+""},
+            success: function(res){
+                if (res.code === 1){
+                    this.total = res.data.totalRecord;
+
+                    let list = res.data.list || [];
+                    this.totalPage = res.data.totalPage || 1;
+                    let popContent;
+                    for (let i = 0 ; i < list.length; i ++){
+                        const {title,img,id} = list[i];
+                        popContent =
+                            `
+                            <div onclick="goDetail(${id})" class='list_new_item'>
+                                                           ${title}
+                               <img src="${img}" class='list_new_img'>
+                            </div>
+                            `
+                            // "<div class='list_new_item' onclick='goDetail(this)' index=`${id}`>" +
+                            // title +
+                            // "<img src='../img/index_banner1.png' class='list_new_img' >" +
+                            // "</div>"
+
+                        ;
+                        $(".newsList").append(popContent);
+                        $("#loadingT").css('display','none');
+                    }
+
+
+                    document.getElementById("totalRecord").innerHTML = `共${this.total}条信息` ;
+                }
+            }
+        });
+    }
+
+    function goDetail(id) {
+        location.href = "./newsDetail.html?id=" + id;
+    }
+</script>
+
+<script>
+    // $(".list_new_item").hover( handlerIn, handlerOut );
+</script>
+
+
+</body>
+</html>

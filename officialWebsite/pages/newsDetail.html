@@ -90,6 +90,31 @@
             align-items: center;
             justify-content: space-between;
         }
+        .newsTitle_top_xs{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        /* 导航项的底下指示条，并添加过渡动画*/
+        .underline-bar {
+            height: 2px;
+            width: 0%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            transition: width 1.5s; /**/
+            -webkit-transition: width 1.5s; /* Safari */
+        }
+
+        /* 鼠标经过导航项的时候显示过渡动画*/
+        li:hover > .underline-bar {
+            width: 100%;
+        }
+
+        /* 选中状态，指示条显示*/
+        .active > .underline-bar {
+            width: 100%;
+        }
+
 
     </style>
 </head>
@@ -111,7 +136,7 @@
         <!-- 申明logo的容器 -->
         <div class="navbar-header">
             <!-- 针对logo等固定内容的样式 -->
-            <a href="#" class="navbar-brand" >海迷聚集地</a>
+            <a href="../index.html" class="navbar-brand" >海迷聚集地</a>
             <!-- 定义隐藏下拉按钮 -->
             <button class="navbar-toggle" data-toggle='collapse' data-target='.collapse'>
                 <span class="icon-bar"></span>
@@ -160,22 +185,40 @@
 
     </div>
 </div>
-<div class="container">
+<div class="container hidden-xs">
     <div class="newsTitle_top">
         <div class="newsTitle">
             <div class="newsTitle_new">新闻</div>
             <div style="margin-left: 5px;margin-right: 5px;font-size: 18px">|</div>
-            <div style="font-size: 18px" id="detailTitle">海迷资讯</div>
+            <div style="font-size: 18px" class="detailTitle">海迷资讯</div>
         </div>
-        <div id="time">2021-03-05</div>
+        <div class="time">2021-03-05</div>
     </div>
 
-    <img src="" alt="" style="width: 70%;margin-left: 10%;margin-bottom: 30px;min-height: 200px" id="newImg"/>
-    <div style="font-size: 15px;margin-bottom: 100px;min-height: 230px" id="newContents">
+    <img src="" alt="" style="width: 70%;margin-left: 10%;margin-bottom: 30px;min-height: 200px" class="newImg"/>
+    <div style="font-size: 15px;margin-bottom: 100px;min-height: 230px" class="newContents">
         当外公知道吴白有喜欢的人时，就像被吴白误导佟年是韩商言的女朋友一样开心。在知道这一消息后的第二天，便一个人带着机器人吴白的儿子吴聊去了商场开启疯狂购物模式。吴白从小在他身边长大，他比任何人都了解吴白这个外孙的性格——不善言谈，所以在看到吴白对艾情的真心喜欢，便开始了跟当年对待韩商言的爱情一样认真又严肃地对待吴白和艾情的爱情。当吴白从艾情口中得知，爸爸突然安排姐妹俩跟一个相亲对象在家里见面时，本来还想让其阻止沈哲的到访，闻此吴白驱车赶到艾情家。见了面的艾情刚把实际情况跟吴白说清楚，就看到外公提着大包小包从出租车上下来。包括吴白都很是诧异，外公为何会突然到访艾情的家里。见此外公并没有做过多的解释，上了楼之后，吴白、吴聊、外公、艾情、艾情的爸爸以及一个陌生的相亲对象，五个人一个机器人开始了群面
     </div>
 
 </div>
+
+<div class="visible-xs">
+    <div class="newsTitle_top_xs">
+        <div class="newsTitle">
+            <div class="newsTitle_new">新闻</div>
+            <div style="margin-left: 5px;margin-right: 5px;font-size: 18px">|</div>
+            <div style="font-size: 18px" class="detailTitle">海迷资讯</div>
+        </div>
+        <div class="time">2021-03-05</div>
+    </div>
+
+    <img src="" alt="" style="width:100%;margin-bottom: 30px;min-height: 200px" class="newImg"/>
+    <div style="font-size: 14px;margin-bottom: 40px;min-height: 230px;width: 100%" class="newContents">
+        当外公知道吴白有喜欢的人时，就像被吴白误导佟年是韩商言的女朋友一样开心。在知道这一消息后的第二天，便一个人带着机器人吴白的儿子吴聊去了商场开启疯狂购物模式。吴白从小在他身边长大，他比任何人都了解吴白这个外孙的性格——不善言谈，所以在看到吴白对艾情的真心喜欢，便开始了跟当年对待韩商言的爱情一样认真又严肃地对待吴白和艾情的爱情。当吴白从艾情口中得知，爸爸突然安排姐妹俩跟一个相亲对象在家里见面时，本来还想让其阻止沈哲的到访，闻此吴白驱车赶到艾情家。见了面的艾情刚把实际情况跟吴白说清楚，就看到外公提着大包小包从出租车上下来。包括吴白都很是诧异，外公为何会突然到访艾情的家里。见此外公并没有做过多的解释，上了楼之后，吴白、吴聊、外公、艾情、艾情的爸爸以及一个陌生的相亲对象，五个人一个机器人开始了群面
+    </div>
+
+</div>
+
 <div class="footer hidden-xs">
     <div class="leftBox">
         <p><a href="#">@2016-2020福州海迷聚集地</a></p>
@@ -245,7 +288,7 @@
 
     //获取具体内容
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: "https://www.fastmock.site/mock/3bee062264cf322e225497758e9a588c/officialWebsite/getNewsListDetail",
         contentType: "application/x-www-form-urlencoded",
         data: {id:id + ""},
@@ -253,10 +296,10 @@
             if (res.code === 1){
                 this.seeNum = res.data.seeNum;
 
-                document.getElementById("detailTitle").innerHTML = res.data.title;
-                document.getElementById("newContents").innerHTML =  res.data.contents;
-                document.getElementById("time").innerHTML =  res.data.datatime;
-                $('#newImg').attr("src", res.data.img);
+                $(".detailTitle").text(res.data.title);
+                $(".newContents").text(res.data.contents);
+                $(".time").text(res.data.datatime);
+                $('.newImg').attr("src", res.data.img);
             }
         }
     });

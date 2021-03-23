@@ -121,6 +121,25 @@
             flex-direction: row;
             justify-content: center;
         }
+        /* 导航项的底下指示条，并添加过渡动画*/
+        .underline-bar {
+            height: 2px;
+            width: 0%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            transition: width 1.5s; /**/
+            -webkit-transition: width 1.5s; /* Safari */
+        }
+
+        /* 鼠标经过导航项的时候显示过渡动画*/
+        li:hover > .underline-bar {
+            width: 100%;
+        }
+
+        /* 选中状态，指示条显示*/
+        .active > .underline-bar {
+            width: 100%;
+        }
     </style>
 </head>
 <link rel="stylesheet" href="../css/css.css"/>
@@ -142,7 +161,7 @@
         <!-- 申明logo的容器 -->
         <div class="navbar-header">
             <!-- 针对logo等固定内容的样式 -->
-            <a href="#" class="navbar-brand" >海迷聚集地</a>
+            <a href="../index.html" class="navbar-brand" >海迷聚集地</a>
             <!-- 定义隐藏下拉按钮 -->
             <button class="navbar-toggle" data-toggle='collapse' data-target='.collapse'>
                 <span class="icon-bar"></span>
@@ -220,17 +239,18 @@
 
     <!--分页-->
     <div class="pageMod">
-        <span class="pull-left no-border" id="totalRecord">共5条记录</span>
+        <span class="pull-left no-border col-xs-12 col-lg-6 col-md-6" id="totalRecord" style="float: right">共5条记录</span>
         <a href="javascript:void(0)" onclick="changePage('start')">首页</a>
         <a href="javascript:void(0)" onclick="changePage('pre')" class="prev page">上一页</a><!--<a class="cur">1</a> <a href="#">2</a>-->
         <a href="javascript:void(0)" onclick="changePage('next')" class="next page">下一页</a>
-        <a href="javascript:void(0)" onclick="changePage('end')">尾页</a> <span>1/2</span>
+        <a href="javascript:void(0)" onclick="changePage('end')" >尾页</a> <span id="pageNow">1/2</span>
     </div>
+
 
 </div>
 <div class="footer hidden-xs">
     <div class="leftBox">
-        <p><a href="#">@2016-2020福州海迷聚集地</a></p>
+        <p><a href="../index.html">@2016-2020福州海迷聚集地</a></p>
 
     </div>
     <div class="leftBox">
@@ -324,12 +344,9 @@
     }
 
     function postNews(pageNo) {
-        if (pageNo === this.oldPageNo){
-            return
-        }
 
         $.ajax({
-            type: "POST",
+            type: "GET",
             url: "https://www.fastmock.site/mock/3bee062264cf322e225497758e9a588c/officialWebsite/getNewsList",
             contentType: "application/x-www-form-urlencoded",
             data: {pageNo:pageNo+""},
@@ -361,6 +378,7 @@
 
 
                     document.getElementById("totalRecord").innerHTML = `共${this.total}条信息` ;
+                    document.getElementById("pageNow").innerHTML = `${pageNo}/${this.totalPage}` ;
                 }
             }
         });

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name=”description” content="海迷聚集地首页">
+    <title>首页</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/animate.min.css"/>
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <style>
+        *,
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        p {
+            font-weight: 300;
+        }
+
+        .topnav {
+            width: 100vw;
+            height: 70px;
+            background-color: rgb(7, 7, 58);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .leftIcon {
+            width: 30%;
+            height: 100%;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .leftIcon img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .rightBox {
+            width: 60%;
+            height: 100%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+
+        .rightBox li {
+            width: 15%;
+            text-align: center;
+        }
+
+        .rightBox li a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .rightBox li a:hover,
+        .rightBox li a:active {
+            color: #325da5;
+        }
+
+        .topnav {
+            width: 100vw;
+            height: 70px;
+            background-color: rgb(7, 7, 58);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .topcontent {
+            width: 100%;
+            height: 100vh;
+            background: url(img/index_banner1.png) no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .leftIcon {
+            width: 30%;
+            height: 100%;
+            background-color: transparent;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        .leftIcon img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .rightBox {
+            width: 55%;
+            height: 100%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+
+        .rightBox li {
+            width: 15%;
+            text-align: center;
+        }
+
+        .rightBox li a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .rightBox li a:hover,
+        .rightBox li a:active {
+            color: #325da5;
+        }
+
+        /* 官方语 */
+        .intBox {
+            width: auto;
+            text-align: center;
+        }
+
+
+        .inputSty .inputOne {
+            width: 88%;
+            height: 100%;
+            border: none;
+            text-align: center;
+            font-size: 16px;
+            border-top-left-radius: 18px;
+            border-bottom-left-radius: 18px;
+            outline: none;
+        }
+
+        .inputSty .inputOne:active {
+            border-radius: 18px;
+            border: 0px;
+            outline: none;
+        }
+
+        .inputSty p {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #1e9fff;
+            text-align: center;
+            line-height: 45px;
+            cursor: pointer;
+            color: #ffffff;
+            user-select: none;
+        }
+
+        /* 第二屏 */
+        .appcontent {
+            width: 100vw;
+            height: 100vh;
+            /* background-color: chocolate; */
+            background: url(img/oneBac.png) no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative
+        }
+
+        /*.appcontent ul{*/
+        /*  width: 100%;*/
+        /*  height: 100%;*/
+        /*  background: url("./img/oneBac-3.png") no-repeat;*/
+        /*}*/
+        .footer {
+            width: 100%;
+            height: 200px;
+            background-color: #1f2329;
+            display: flex;
+        }
+
+        .sectionTwo {
+            width: 100%;
+            height: auto;
+            /*background-color: whitesmoke;*/
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .sectionTwo li {
+            width: 100px;
+            height: 100px;
+            border-radius: 9px;
+            transition: 0.2s;
+            /* margin: 16px; */
+        }
+
+        .sectionTwo li img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 9px;
+        }
+
+        .sectionTwo li p {
+            font-size: 11px;
+            text-align: center;
+            margin: 1px;
+        }
+
+        .sectionTwo > li:nth-child(1),
+        .sectionTwo > li:nth-child(7) {
+            margin-top: 130px;
+        }
+
+        .sectionTwo > li:nth-child(2),
+        .sectionTwo > li:nth-child(6) {
+            margin-top: 80px;
+        }
+
+        .sectionTwo > li:nth-child(3),
+        .sectionTwo > li:nth-child(5) {
+            margin-top: 58px;
+        }
+
+        /* .sectionTwo > li:nth-child(4),
+        .sectionTwo > li:nth-child(6) {
+          margin-top: 15px;
+        } */
+        .sectionTwo > li:hover {
+            transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -webkit-transform: scale(1.3);
+            -o-transform: scale(1.3);
+        }
+
+        .maincontent {
+            width: 100%;
+            height: auto;
+            background-color: #fff;
+        }
+
+        .mainPicSty {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .companySty h3,
+        .companySty h4 {
+            margin: 30px;
+            font-weight: 300;
+            font-size: 15px;
+        }
+
+        .looo {
+            position: relative;
+        }
+
+        .looo::after {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 6px;
+            background-color: #1e9fff;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 26px;
+            border-radius: 8px;
+        }
+
+        .leftBox {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .leftBox p {
+            width: 200px;
+            text-align: left;
+        }
+
+        .leftBox p a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .adSty {
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+        }
+
+        .adSty li {
+            width: auto;
+            height: auto;
+        }
+
+        .adSty li img {
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+            margin: 6px;
+        }
+
+        /* h5 mobile */
+        .topBac {
+            width: 100vw;
+            height: 250px;
+            background: url(img/index_banner1.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .appSty {
+            width: 100vw;
+            height: 300px;
+            /* background-color: blue; */
+        }
+
+        .appSty ul {
+            width: 100%;
+            height: 100%;
+            /* background-color: blanchedalmond; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .appSty ul li {
+            width: 85px;
+            height: 85px;
+            transform: scale(0.7);
+        }
+
+        .appSty ul li img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .mainSty div h3,
+        .mainSty div h4 {
+            font-weight: 300;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .mainSty div .looo::after {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 6px;
+            background-color: #1e9fff;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 18px;
+            border-radius: 8px;
+        }
+
+        .secondOne div h2 {
+            text-align: center;
+            font-size: 9px;
+        }
+
+        .secondOne div p {
+            text-align: center;
+            font-weight: 300;
+            font-size: 11px;
+        }
+
+        .floatImg {
+            border-radius: 9px;
+            opacity: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: auto;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            height: auto;
+            background: #fff;
+
+            width: auto;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        /* 导航项的底下指示条，并添加过渡动画*/
+        .underline-bar {
+            height: 2px;
+            width: 0%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            transition: width 1.5s; /**/
+            -webkit-transition: width 1.5s; /* Safari */
+        }
+
+        /* 鼠标经过导航项的时候显示过渡动画*/
+        li:hover > .underline-bar {
+            width: 100%;
+        }
+
+        /* 选中状态，指示条显示*/
+        .active > .underline-bar {
+            width: 100%;
+        }
+
+        .logoImg {
+            width: 120px;
+            height: 120px
+        }
+
+    </style>
+</head>
+<body>
+<!-- 定义反白导航条 -->
+<div class="navbar-inverse navbar-static-top" style="background-color: rgb(7, 7, 58);justify-content: center">
+    <div class="container">
+        <!-- 申明logo的容器 -->
+        <div class="navbar-header">
+            <!-- 针对logo等固定内容的样式 -->
+            <a href="#" class="navbar-brand">海迷聚集地</a>
+            <!-- 定义隐藏下拉按钮 -->
+            <button class="navbar-toggle" data-toggle='collapse' data-target='.collapse'>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+
+        <!-- 做隐藏菜单 -->
+        <div class="collapse navbar-collapse" id="togglemenu">
+            <!-- 菜单项 -->
+            <ul class="nav navbar-nav">
+                <!-- "cative"：定义当前页 -->
+                <li class="active">
+                    <a href="#" style="background-color: rgb(7, 7, 38);">首页</a>
+                    <div class="underline-bar"></div>
+                </li>
+                <li>
+                    <a href="./pages/news.html">新闻</a>
+                    <div class="underline-bar"></div>
+                </li>
+                <li><a href="./pages/aboutUs.html">关于我们</a>
+                    <div class="underline-bar"></div>
+                </li>
+            </ul>
+
+            <form class="navbar-form navbar-right">
+                <!-- 声明表单组 -->
+                <div class="form-group">
+                    <!-- 声明输入框组 -->
+                    <div class="input-group">
+                        <!-- 声明文本输入框 -->
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                                <!-- 放大镜按钮 -->
+                                <button class="btn btn-default">
+                                    <!-- 用文字代替图标 -->
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <img data-src="img/index_banner1.png" alt="" class="swiper-slide topBanner lazyload"/>
+        <img src="img/index_banner2.png" alt="" class="swiper-slide topBanner lazyload"/>
+        <img src="img/index_banner3.png" alt="" class="swiper-slide topBanner lazyload"/>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<div class="appcontent hidden-xs">
+    <h2 class="wow fadeIn"
+        data-wow-delay="1s"
+        data-wow-duration="1.5s"
+        style="position: absolute;top: 16%;left: 50%;font-size: 22px;transform: translateX(-50%)">
+        オレは海贼王になる男だ！海贼王に オレはなる！</h2>
+    <h5 class="wow fadeIn"
+        data-wow-delay="1.3s"
+        data-wow-duration="1.9s" style="position: absolute;top: 22%;left: 50%;transform: translateX(-50%)">
+        我会成为世界第一强的剑客的，直到我的名字响彻天堂</h5>
+    <ul class="sectionTwo">
+        <li class="wow bounceInUp" data-wow-delay="1s" data-wow-duration="2s">
+            <img src="./img/logo_usuopu.png" alt="" class="logoImg"/>
+            <p>乌索普</p>
+        </li>
+        <li
+                class="wow slideInUp"
+                data-wow-delay="1.2s"
+                data-wow-duration="1.5s"
+        >
+            <img src="./img/logo_qiaoba.png" alt="" class="logoImg"/>
+            <p>乔巴</p>
+        </li>
+        <li
+                class="wow bounceInDown"
+                data-wow-dela="1.3"
+                data-wow-duration="1.8s"
+        >
+            <img src="./img/logo_aisi.png" alt="" class="logoImg"/>
+            <p>艾斯</p>
+        </li>
+        <li class="wow slideInUp" data-wow-delay="1.5" data-wow-duration="1.6s">
+            <img src="./img/logo_suolong.png" alt="" class="logoImg"/>
+            <p>索隆</p>
+        </li>
+        <li class="wow slideInUp" data-wow-delay="1.5" data-wow-duration="1.6s">
+            <img src="./img/logo_lufei.png" alt="" class="logoImg"/>
+            <p>路飞</p>
+        </li>
+        <li
+                class="wow slideInDown"
+                data-wow-delay="1.6"
+                data-wow-duration="1.8s"
+        >
+            <img src="./img/logo_shanzhi.png" alt="" class="logoImg"/>
+            <p>山治</p>
+        </li>
+        <li class="wow slideInUp" data-wow-duration="2s">
+            <img src="./img/logo_namei.png" alt=""/>
+            <p>娜美</p>
+        </li>
+        <li class="wow slideInUp" data-wow-duration="1.8s">
+            <img src="./img/logo_buluke.png" alt="" class="logoImg"/>
+            <p>布鲁克</p>
+        </li>
+        <!-- <li class="wow bounceInUp" data-wow-duration="1.2s">
+              <span>产品一</span>
+            </li>
+            <li class="wow slideInUp" data-wow-duration="1.1s">
+              <span>产品一</span>
+            </li>
+            <li class="wow bounceInUp" data-wow-duration="1s">
+              <span>产品一</span>
+            </li> -->
+    </ul>
+</div>
+<div class="maincontent hidden-xs">
+    <div
+            style="
+          height: 100vh;
+          background-color: transparent;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 30px;
+        "
+    >
+        <div class="col-md-5 companySty col-xs-5">
+            <!-- <h3
+              class="looo wow bounceInDown"
+              data-wow-duration="1.5s"
+              style="text-align: center; font-weight: bold; font-size: 22px"
+            >
+              公司介绍
+            </h3>
+            <h4 style="text-align: center">对新事物保有热情</h4> -->
+            <h3
+                    class="wow slideInUp"
+                    data-wow-duration="1.3s"
+                    style="text-align: left;letter-spacing: 1px;line-height: 30px"
+            >
+                我们的主人公路飞，
+                他这个人最大的特点就是三个一个是对梦想的执着，另一个就是用于探索的精神，还有就是敢于笑对死亡的一个心态，
+                对于任何的困难他都是比较乐观的，即使在特别大的为难之下，它可以保持一个乐观的心态，这一点是非常打动我的，
+                他对于梦想的坚持是十分的执着，我们也都知道他从小都想成为一个海贼王，无论别人。是怎么嘲笑他或者是不承认他？
+            </h3>
+            <h4 class="wow bounceInLeft" data-wow-duration="1.5s"
+                style="text-align: left;letter-spacing: 1px;line-height: 30px">
+                他从来就不会因为别人所说的事情而改变自己的梦想，自己确确实实是要成为海贼王的男人。
+                他公开别人的嘲笑，只是为了自己的梦想敢于付出。
+                在这个过程中它招来了很多团队有所龙还有索隆娜美香吉士等人他们都也怀有自己的梦想，
+                可以说这是一个梦想的团队，并不是一个想要去企图得到别人财产，为了自己贪婪无限的欲望
+            </h4>
+        </div>
+        <div style="width: 50%; display: flex; flex-direction: column" class="col-md-5 col-xs-5">
+            <div style="box-sizing: border-box; padding: 6px">
+                <h3
+                        class="wow slideInUp"
+                        data-wow-duration="1.3s"
+                        style="text-align: center"
+                >
+                    蒙奇·D·路飞
+                </h3>
+                <p
+                        class="wow slideInUp"
+                        data-wow-duration="1.5s"
+                        style="text-align: center"
+                >
+                    海贼王,我当定了!
+                </p>
+            </div>
+            <img
+                    class="mainPicSty wow slideInUp"
+                    data-wow-duration="1.5s"
+                    src="./img/index_lufei.png"
+                    alt=""
+            />
+        </div>
+    </div>
+    <div
+            style="
+          height: 100vh;
+          margin-top: 30px;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+        "
+    >
+        <div
+                style="
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          "
+        >
+            <div style="box-sizing: border-box; padding: 6px" class="col-md-5 col-xs-5">
+                <h3
+                        class="wow slideInDown"
+                        data-wow-duration="2s"
+                        style="text-align: center"
+                >
+                    罗罗诺亚·索隆
+                </h3>
+                <p
+                        class="wow slideInUp"
+                        data-wow-duration="1.2s"
+                        style="text-align: center"
+                >
+                    我会成为世界第一强的剑客的，直到我的名字响彻天堂
+                </p>
+            </div>
+            <img
+                    class="mainPicSty wow slideInUp"
+                    data-wow-duration="1.2s"
+                    src="./img/index_suolong.png"
+                    alt=""
+            />
+        </div>
+        <div class="col-md-5 companySty col-xs-5">
+            <h3
+                    class="wow slideInUp"
+                    data-wow-duration="1.3s"
+                    style="text-align: left;letter-spacing: 1px;line-height: 30px"
+            >
+                索隆是“草帽一伙”战斗员，极恶的世代之一，集结 香波地群岛的十一超新星之一。
+                悬赏金3亿2000万贝里，被称作“海贼猎人”。
+            </h3>
+            <h4 class="wow bounceInLeft" data-wow-duration="1.5s"
+                style="text-align: left;letter-spacing: 1px;line-height: 30px">
+                刚出场的索隆身上带着点叛逆和傲气的味道，刚开始的挑衅路飞，
+                “恶言”拒绝女孩嘉利送的饭团，离开海军基地前又挑衅海军，吓唬“乌索普海贼团”的三个小孩子无不体现着这一点。
+                但是同样是在东海篇中败给鹰眼后性格便开始慢慢发生了变化。随后在航海的过程中渐渐成熟，冷静沉稳的性格开始明显地体现出来了。
+            </h4>
+        </div>
+
+    </div>
+    <div
+            style="
+          height: 100vh;
+          margin-top: 30px;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+        "
+    >
+        <div
+                class="col-md-4"
+                style="
+            background-color: #f8f9fa;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+          "
+        >
+            <h2 class="wow slideInDown" data-wow-duration="1.5s">
+                波特卡斯·D·艾斯
+            </h2>
+            <p class="wow slideInDown" data-wow-duration="1.3s">
+                波特卡斯·D·艾斯，“海贼王”哥尔·D·罗杰的儿子。
+            </p>
+            <p class="wow slideInDown" data-wow-duration="1.5s">
+                自然系烧烧果实的能力者，是三兄弟中的大哥
+            </p>
+            <h2 class="wow slideInDown" data-wow-duration="1.5s">
+                萨博·切利诺
+            </h2>
+            <p class="wow slideInDown" data-wow-duration="1.3s">
+                革命军参谋总长，三兄弟中第一个出海
+            </p>
+            <h2 class="wow slideInDown" data-wow-duration="1.6s">
+                蒙奇·D·路飞
+            </h2>
+            <p class="wow slideInDown" data-wow-duration="1.3">
+                年纪最小，终会继承艾斯的意志
+            </p>
+        </div>
+        <div style="width: 50%; display: flex; flex-direction: column">
+            <div style="box-sizing: border-box; padding: 6px">
+                <h3
+                        class="wow slideInUp"
+                        data-wow-duration="1.3s"
+                        style="text-align: center"
+                >
+                    路飞三兄弟
+                </h3>
+                <p
+                        class="wow slideInUp"
+                        data-wow-duration="1.5s"
+                        style="text-align: center"
+                >
+                    兄弟的羁绊是斩不断的，艾斯永远活在心中
+                </p>
+            </div>
+            <img
+                    class="mainPicSty wow slideInUp"
+                    data-wow-duration="1.5s"
+                    src="./img/index_san.png"
+                    alt=""
+            />
+        </div>
+    </div>
+</div>
+<div class="footer hidden-xs">
+    <div class="leftBox">
+        <p><a href="#">@2016-2020福州海迷聚集地</a></p>
+
+    </div>
+    <div class="leftBox">
+        <p><a href="#">关注我们</a></p>
+        <ul class="adSty">
+            <li><img src="./img/微信.png" alt=""/></li>
+            <li><img src="./img/知乎.png" alt=""/></li>
+            <li><img src="./img/头条.png" alt=""/></li>
+            <li><img src="./img/抖音.png" alt=""/></li>
+            <li><img src="./img/微博.png" alt=""/></li>
+            <img
+                    class="floatImg"
+                    style="
+              width: 70px;
+              height: 70px;
+              object-fit: cover;
+              position: absolute;
+              top: 40px;
+              object-fit: cover;
+            "
+                    src="./img/float1.png"
+                    alt=""
+            />
+        </ul>
+    </div>
+</div>
+<!-- h5 mobile -->
+<!--手机端显示-->
+<!--<div class="topBac visible-xs"></div>-->
+<div class="appSty visible-xs">
+    <ul>
+        <li>
+            <img src="./img/logo_usuopu.png" alt="" class="logoImg"/>
+        </li>
+        <li>
+            <img src="./img/logo_qiaoba.png" alt=""/>
+        </li>
+        <li>
+            <img src="./img/logo_aisi.png" alt=""/>
+        </li>
+        <li>
+            <img src="./img/logo_suolong.png" alt=""/>
+        </li>
+        <li>
+            <img src="./img/logo_lufei.png" alt=""/>
+        </li>
+        <li>
+            <img src="./img/logo_shanzhi.png" alt=""/>
+        </li>
+        <li>
+            <img src="./img/logo_namei.png" alt=""/>
+        </li>
+        <li>
+            <img src="./img/logo_buluke.png" alt=""/>
+        </li>
+    </ul>
+</div>
+<div class="mainSty visible-xs">
+    <div class="col-xs-12">
+        <h3
+                class="looo"
+                data-wow-duration="1.5s"
+                style="text-align: center; font-weight: bold; font-size: 15px"
+        >
+            蒙奇·D·路飞
+        </h3>
+        <h4 style="text-align: center">海贼王,我当定了!</h4>
+        <div class="col-md-6 companySty">
+            <img
+                    class="mainPicSty wow slideInRight"
+                    data-wow-duration="1.5s"
+                    src="./img/index_lufei.png"
+                    alt=""
+            />
+            <h6
+                    data-wow-duration="1.3s"
+                    style="text-align: left;letter-spacing: 1px;line-height: 20px"
+            >
+                我们的主人公路飞，悬赏金15亿贝里
+                他这个人最大的特点就是三个一个是对梦想的执着，另一个就是用于探索的精神，还有就是敢于笑对死亡的一个心态，
+                对于任何的困难他都是比较乐观的，即使在特别大的为难之下，它可以保持一个乐观的心态，这一点是非常打动我的，
+                他对于梦想的坚持是十分的执着，我们也都知道他从小都想成为一个海贼王，无论别人。是怎么嘲笑他或者是不承认他？
+            </h6>
+            <h6
+                    style="text-align: left;letter-spacing: 1px;line-height: 20px">
+                他从来就不会因为别人所说的事情而改变自己的梦想，自己确确实实是要成为海贼王的男人。
+                他公开别人的嘲笑，只是为了自己的梦想敢于付出。
+                在这个过程中它招来了很多团队有所龙还有索隆娜美香吉士等人他们都也怀有自己的梦想，
+                可以说这是一个梦想的团队，并不是一个想要去企图得到别人财产，为了自己贪婪无限的欲望
+            </h6>
+
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <h3
+                class="looo"
+                data-wow-duration="1.5s"
+                style="text-align: center; font-weight: bold; font-size: 15px"
+        >
+            罗罗诺亚·索隆
+        </h3>
+        <h4 style="text-align: center">我会成为世界第一强的剑客的，直到我的名字响彻天堂</h4>
+        <div class="col-md-6 companySty">
+            <img
+                    class="mainPicSty wow slideInLeft"
+                    data-wow-duration="1.5s"
+                    src="./img/index_suolong.png"
+                    alt=""
+            />
+            <h6
+                    data-wow-duration="1.3s"
+                    style="text-align: left;letter-spacing: 1px;line-height: 20px"
+            >
+                索隆是“草帽一伙”战斗员，极恶的世代之一，集结 香波地群岛的十一超新星之一。
+                悬赏金3亿2000万贝里，被称作“海贼猎人”。
+            </h6>
+            <h6
+                    style="text-align: left;letter-spacing: 1px;line-height: 20px">
+                刚出场的索隆身上带着点叛逆和傲气的味道，刚开始的挑衅路飞，
+                “恶言”拒绝女孩嘉利送的饭团，离开海军基地前又挑衅海军，吓唬“乌索普海贼团”的三个小孩子无不体现着这一点。
+                但是同样是在东海篇中败给鹰眼后性格便开始慢慢发生了变化。随后在航海的过程中渐渐成熟，冷静沉稳的性格开始明显地体现出来了。
+            </h6>
+
+        </div>
+    </div>
+    <div class="secondOne">
+        <div class="col-xs-12">
+            <h3
+                    class="looo"
+                    data-wow-duration="1.5s"
+                    style="text-align: center; font-weight: bold; font-size: 15px"
+            >
+                路飞三兄弟
+            </h3>
+            <h4 style="text-align: center">兄弟的羁绊是斩不断的，艾斯永远活在心中</h4>
+            <img
+                    class="mainPicSty wow slideInRight"
+                    data-wow-duration="1.5s"
+                    src="./img/index_san.png"
+                    alt=""
+            />
+
+            <h2 class="wow slideInDown" data-wow-duration="1.5s">
+                波特卡斯·D·艾斯
+            </h2>
+            <p class="wow slideInDown" data-wow-duration="1.3s">
+                波特卡斯·D·艾斯，“海贼王”哥尔·D·罗杰的儿子。
+            </p>
+            <p class="wow slideInDown" data-wow-duration="1.5s">
+                自然系烧烧果实的能力者，是三兄弟中的大哥
+            </p>
+            <h2 class="wow slideInDown" data-wow-duration="1.5s">
+                萨博·切利诺
+            </h2>
+            <p class="wow slideInDown" data-wow-duration="1.3s">
+                革命军参谋总长，三兄弟中第一个出海
+            </p>
+            <h2 class="wow slideInDown" data-wow-duration="1.6s">
+                蒙奇·D·路飞
+            </h2>
+            <p class="wow slideInDown" data-wow-duration="1.3">
+                年纪最小，终会继承艾斯的意志
+            </p>
+
+        </div>
+    </div>
+    <div class="secondOne">
+        <div class="col-xs-12" style="background-color: #1f2329">
+            <ul
+                    style="
+              width: 100%;
+              text-align: center;
+              box-sizing: border-box;
+              padding: 5px;
+              background-color: #1f2329;
+            "
+            >
+                <li>
+                    <a style="text-decoration: none; color: #666;font-size: 9px" href="#"
+                    >福州K&K软件科技有限公司</a
+                    >
+                </li>
+
+                <li>
+                    <a style="text-decoration: none; color: #666;font-size: 9px" href="#"
+                    >联系方式：13305907017</a
+                    >
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        loop: true,
+        autoplay: true,
+        speed: 900,
+        autoHeight: true
+    });
+</script>
+<script src="./js/wow.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script>
+    $(".adSty li").hover(
+        function () {
+            let _index = $(this).index();
+            $('.floatImg').animate({
+                opacity: 1
+            })
+            $(".floatImg").css({
+                left: 42 * _index,
+            });
+            $(".floatImg").attr("src", `./img/float${_index + 1}.png`);
+        },
+        function () {
+            $('.floatImg').animate({
+                opacity: 0
+            }, 100)
+        }
+    );
+</script>
+</body>
+</html>

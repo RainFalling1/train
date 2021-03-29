@@ -1,0 +1,24 @@
+
+
+.tabSelect{
+
+}
+/* 导航项的底下指示条，并添加过渡动画*/
+.underline-bar {
+    height: 2px;
+    width: 0%;
+    margin: 0 auto;
+    background-color: #000;
+    transition: width 1.5s; /**/
+    -webkit-transition: width 1.5s; /* Safari */
+}
+/* 鼠标经过导航项的时候显示过渡动画*/
+li:hover > .underline-bar {
+    width: 100%;
+}
+
+/* 选中状态，指示条显示*/
+.active > .underline-bar {
+    width: 100%;
+}
+

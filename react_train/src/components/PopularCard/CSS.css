@@ -1,0 +1,17 @@
+.itemCard{
+    width: 20%;
+    background: rgba(0, 0, 0, 0.08);
+    margin: 10px 5px;
+    boxSizing: 'content-box';
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding:10px 0;
+    text-decoration: none;
+}
+
+.itemCard:hover
+{
+    transform:scale(1.05);
+    transition: all 0.5s;
+}

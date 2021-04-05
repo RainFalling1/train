@@ -10,7 +10,11 @@
 }
 
 .topNavBtn:hover{
-    color: #61dafb;
+    color: #ef8a33;
 
+}
+
+.topNavBtnSelect{
+    color: #ef8a33;
 }
 

@@ -9,6 +9,7 @@ import Popular from "../popular/Popular";
 import Battle from "../battle/Battle";
 import BattleResult from "../battle/BattleResult";
 import TrainNav from "../../components/TrainNav";
+import PopularList from "../popular/PoPularList";
 
 export default function App() {
     return (

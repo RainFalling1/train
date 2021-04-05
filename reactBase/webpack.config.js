@@ -50,9 +50,8 @@ module.exports = function (env,args){
             )
         ],
         resolve: {
-            extensions: ['.js', '.vue', '.json'],
             alias: {
-                '@': resolve('src'), // 给src起了个别名
+                '@': path.resolve('src'), // 给src起了个别名
             }
         }
     }

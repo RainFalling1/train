@@ -14,7 +14,7 @@ const TrainNav = () => {
         }}
         >
           <li style={{ listStyle: 'none' }} onClick={() => setSelectIndex(0)}>
-            <Link to="/" style={{ textDecoration: 'none' }} className={selectIndex === 0 ? 'SelectNav' : 'UnselectNav'}>Popular</Link>
+            <Link to="/popular?type=all" style={{ textDecoration: 'none' }} className={selectIndex === 0 ? 'SelectNav' : 'UnselectNav'}>Popular</Link>
             <div className="underline-bar" />
           </li>
           <li style={{ marginLeft: 10, listStyle: 'none' }} onClick={() => setSelectIndex(1)}>

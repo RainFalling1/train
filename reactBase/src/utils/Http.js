@@ -6,6 +6,7 @@ import axios from 'axios';
 axios.interceptors.request.use(async (config) => {
   const set = config;
   set.url = `https://api.github.com/${config.url}`;
+  // eslint-disable-next-line no-param-reassign
   config.headers['x-ratelimit-limit'] = 60;
   return set;
 }, (error) => {

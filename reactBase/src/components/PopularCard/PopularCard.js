@@ -28,7 +28,7 @@ const PopularCard = (props) => {
   };
 
   return (
-    <div className="itemCard" key={i.id} href={i.owner.html_url}>
+    <a className="itemCard" key={i.id} href={i.owner.html_url}>
       {/* eslint-disable-next-line radix */}
       <h2>{`#${parseInt(index) + 1}`}</h2>
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
@@ -59,7 +59,7 @@ const PopularCard = (props) => {
           <span style={style.lispan}>{i.open_issues} open_issues</span>
         </li>
       </ul>
-    </div>
+    </a>
   );
 };
 

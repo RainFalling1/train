@@ -93,7 +93,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "eslint": "eslint --fix src/"
   },
   "browserslist": {
     "production": [
@@ -114,10 +115,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,less}": [
-      "prettier --write",
-      "git add"
-    ],
+
     "**/*.{js,jsx}": "eslint --ext .js"
   },
 

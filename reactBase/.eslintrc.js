@@ -7,7 +7,7 @@ module.exports = {
     "extends": ["airbnb","prettier"],
     "env": { browser: true, es6: true, },
     "rules": {
-        'react/jsx-filename-extension': [1, { extensions: ['.js'] }],
+        // 'react/jsx-filename-extension': [1, { extensions: ['.js'] }],
         'react/prop-types': 0,
         'react/prefer-stateless-function': 0,
         'react/no-array-index-key': 0,
@@ -21,5 +21,17 @@ module.exports = {
         'jsx-a11y/click-events-have-key-events':0,
         'import/order':0,
         'no-unused-expressions':0,
+        // 'prettier/prettier':[
+        //     'error',
+        //     {
+        //         printWidth:80,
+        //         singleQuote:true,
+        //         trailingComma:'all',
+        //         bracketSpacing:true,
+        //         jsxBracketSameLine:false,
+        //         parser:'babylon',
+        //         semi:false,
+        //     }
+        // ]
     }
 }

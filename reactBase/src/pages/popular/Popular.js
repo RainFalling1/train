@@ -3,7 +3,7 @@ import {
   Spin, Row, Col,Alert
 } from 'antd';
 import { getAll, getMoreByUrl } from '../../services/Popular';
-import './Popular.css';
+// import './Popular.css';
 import PopularCard from '../../components/PopularCard/PopularCard';
 import InfiniteScroll from 'react-infinite-scroller';
 // import { Link } from 'react-router-dom';
@@ -76,6 +76,7 @@ const Popular = () => {
 
 
   return (
+      // eslint-disable-next-line react/jsx-filename-extension
     <div style={{ flexDirection: 'column', alignItems: 'center', display: 'flex' }}>
       <PopularNav callback={updateList} currentType={pageType}/>
       {list && list.length > 0
@@ -87,7 +88,7 @@ const Popular = () => {
               hasMore
               initialLoad
             >
-              {/* 卡片区域 */}
+              {/* 卡片列表 */}
               {/* <div className={"listArea"}> */}
               <Row type="flex" justify="center" align="center">
                 {

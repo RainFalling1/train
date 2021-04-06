@@ -1,3 +1,6 @@
+/**
+ * eslint-disable-next-line prettier/prettier
+ */
 import React, {useEffect} from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 import './CSS.css';
@@ -28,6 +31,7 @@ const PopularCard = (props) => {
   };
 
   return (
+      // eslint-disable-next-line react/jsx-filename-extension
     <a className="itemCard" key={i.id} href={i.owner.html_url}>
       {/* eslint-disable-next-line radix */}
       <h2>{`#${parseInt(index) + 1}`}</h2>

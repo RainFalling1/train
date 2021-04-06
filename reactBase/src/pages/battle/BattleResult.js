@@ -60,6 +60,7 @@ class BattleResult extends React.Component {
 
   render() {
     return (
+        // eslint-disable-next-line react/jsx-filename-extension
       <div style={{ display: 'block', backgroundColor: '#fff', paddingBottom: '50px' }}>
 
         <div style={{

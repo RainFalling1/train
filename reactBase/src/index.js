@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "@babel/polyfill";
-import './index.css';
+// import "@babel/polyfill";
+// import './index.css';
+// eslint-disable-next-line import/no-unresolved
+// import './styles/index.less'
 // 引入
 import TrainRouter from './pages/router/TrainRouter';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-    <TrainRouter />,
+    // eslint-disable-next-line react/jsx-filename-extension
+  <React.StrictMode>
+    {/* <App /> */}
+    <TrainRouter />
+  </React.StrictMode>,
   document.getElementById('container'),
 );
 

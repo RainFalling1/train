@@ -48,6 +48,7 @@ class Battle extends React.Component {
 
       return (
 
+          // eslint-disable-next-line react/jsx-filename-extension
         <div>
           <div style={{ backgroundColor: '#fff', display: 'block' }}>
             <h1 style={{

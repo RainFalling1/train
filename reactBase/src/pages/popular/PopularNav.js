@@ -43,7 +43,7 @@ const PopularNav = ({callback,currentType}) => {
             {
                 typeList.map((i, index) => {
                     // eslint-disable-next-line no-unused-vars
-                    const navStr = `/popular/?type=${i.type}`;
+                    const navStr = `/popular?type=${i.type}`;
                     return(
                         // eslint-disable-next-line jsx-a11y/no-static-element-interactions
                         <a onClick={() => {

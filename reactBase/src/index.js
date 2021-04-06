@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "@babel/polyfill";
 import './index.css';
 // 引入
-// import "@babel/polyfill";
 import TrainRouter from './pages/router/TrainRouter';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    {/* <App /> */}
-    <TrainRouter />
-  </React.StrictMode>,
+    <TrainRouter />,
   document.getElementById('container'),
 );
 

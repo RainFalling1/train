@@ -7,7 +7,10 @@ import {
 import Popular from '../popular/Popular';
 import Battle from "../battle/Battle";
 import BattleResult from '../battle/BattleResult';
-import TrainNav from '@/components/TrainNav';
+import TrainNav from '../../components/TrainNav';
+
+
+// const Battle1 = lazy(() => import('../battle/Battle'));
 
 export default function App() {
   return (
